@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta Interactiva - Día de la Mujer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #c084fc, #7c3aed);
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+        .card {
+            background: white;
+            color: #7c3aed;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            max-width: 350px;
+            text-align: center;
+            position: relative;
+        }
+        .card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(to right, #a855f7, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hidden {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .visible {
+            display: block;
+            opacity: 1;
+        }
+        #mensajeSecundario {
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+        }
+        #mensajeSecundario2 {
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+        }
+        button {
+            background: #a855f7;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            margin-top: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background: #9333ea;
+            transform: scale(1.05);
+        }
+        .floating-hearts {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .heart {
+            color: #ff4d6d;
+            font-size: 24px;
+            animation: float 1.5s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="floating-hearts">
+            <span class="heart">❤️</span>
+            <span class="heart">💜</span>
+            <span class="heart">❤️</span>
+        </div>
+        <h1 id="mensaje">Feliz Día de la Mujer 💜</h1>
+        <p class="hidden" id="mensajeSecundario">🌻 <b>Gabrielaaaa feliz díaaa !!, espero que sea un bonito día para tí, te lo mereces por ser como eres, un ser de luz :3</b> 🌻</p>
+        <p class="hidden" id="mensajeSecundario2"> <b>Es una pequeña sorpresa, espero que te haya gustado</b> </p>
+        <button id="mostrarMensaje">Ver mensaje especial</button>
+    </div>
+    <script>
+        document.getElementById("mostrarMensaje").addEventListener("click", function() {
+            let mensaje = document.getElementById("mensajeSecundario");
+            let mensaje2 = document.getElementById("mensajeSecundario2");
+            mensaje.classList.toggle("hidden");
+            mensaje.classList.toggle("visible");
+            mensaje2.classList.toggle("hidden");
+            mensaje2.classList.toggle("visible");
+        });
+    </script>
+</body>
+</html>
