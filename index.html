@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarjeta Interactiva - Día de la Mujer</title>
+    <title>❤️ Tarjeta para Gabriela ❤️</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh; /* Cambiado a min-height para permitir scroll */
             background: linear-gradient(to right, #c084fc, #7c3aed);
             font-family: 'Poppins', sans-serif;
             color: white;
             text-align: center;
-            overflow: hidden;
+            margin: 0; /* Eliminar el margen predeterminado */
+            padding: 20px; /* Agregar un poco de padding */
         }
         .card {
             background: white;
@@ -25,8 +26,10 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
             max-width: 350px;
+            width: 100%; /* Asegurar que ocupe el ancho disponible */
             text-align: center;
             position: relative;
+            margin-bottom: 20px; /* Margen inferior para evitar que el contenido toque el borde */
         }
         .card:hover {
             transform: scale(1.1);
