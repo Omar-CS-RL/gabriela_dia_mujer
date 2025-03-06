@@ -91,28 +91,42 @@
             50% { transform: translateY(-10px); }
             100% { transform: translateY(0); opacity: 1; }
         }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
     </style>
 </head>
 <body>
     <div class="card">
         <div class="floating-hearts">
             <span class="heart">❤️</span>
-            <span class="heart">💜</span>
+            <span class="heart">🌻</span>
+            <span class="heart">❤️</span>
+            <span class="heart">🌻</span>
+            <span class="heart">❤️</span>
+            <span class="heart">🌻</span>
             <span class="heart">❤️</span>
         </div>
         <h1 id="mensaje">Feliz Día de la Mujer 💜</h1>
-        <p class="hidden" id="mensajeSecundario">🌻 <b>Gabrielaaaa feliz díaaa !!!, espero que sea un bonito día para tí, te lo mereces por ser como eres, un ser de luz :3</b> 🌻</p>
+        <p class="hidden" id="mensajeSecundario">🌻 <b>Gabrielaaaa feliz díaaa !!!, espero que sea un bonito día para tí, te lo mereces por todo lo que haces,
+             eres un ser de luz :3. Quiero que sonrías siempre, me gusta verte así feliz, no solo hoy día por ser un día especial para tí, sino cada día. Aprovecho esto para decirte que te extraño y que te quiero :) ❤️ </b> 🌻</p>
         <p class="hidden" id="mensajeSecundario2"> <b>Es una pequeña sorpresa, espero que te haya gustado</b> </p>
+        <img class="hidden" id="imagen" src="gabriela.jpg" alt="Imagen de sorpresa">
         <button id="mostrarMensaje">Haz clic aquí Gabrielaa <3</button>
     </div>
     <script>
         document.getElementById("mostrarMensaje").addEventListener("click", function() {
             let mensaje = document.getElementById("mensajeSecundario");
             let mensaje2 = document.getElementById("mensajeSecundario2");
+            let imagen = document.getElementById("imagen");
             mensaje.classList.toggle("hidden");
             mensaje.classList.toggle("visible");
             mensaje2.classList.toggle("hidden");
             mensaje2.classList.toggle("visible");
+            imagen.classList.toggle("hidden");
+            imagen.classList.toggle("visible");
         });
     </script>
 </body>
